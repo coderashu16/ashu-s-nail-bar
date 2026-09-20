@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashu's Nail Bar | Nail Extensions & Nail Art</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff9fb;
+            color: #3d252d;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: #713348;
+        }
+
+        .logo span {
+            color: #d47796;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a3038;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #c25778;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                radial-gradient(circle at 20% 20%, #f9d1dd, transparent 30%),
+                radial-gradient(circle at 80% 80%, #f5dbe4, transparent 30%),
+                #fff5f8;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .welcome {
+            letter-spacing: 5px;
+            font-size: 13px;
+            color: #b65372;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 78px;
+            color: #632d40;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #c85c7e;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: auto;
+
+            font-size: 18px;
+            line-height: 1.8;
+            color: #705861;
+
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 32px;
+
+            background: #b94f70;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #873c56;
+            transform: translateY(-3px);
+        }
+
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 90px 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title p {
+            color: #bb5b78;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, serif;
+            font-size: 43px;
+            color: #633344;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            background: white;
+        }
+
+        .service-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #fff7f9;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            border: 1px solid #f1dce4;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(130,50,80,0.12);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 14px;
+            color: #633344;
+        }
+
+        .service-card p {
+            color: #765c64;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .price {
+            color: #b94f70;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            height: 450px;
+
+            border-radius: 200px 200px 20px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(circle, #fff 10%, transparent 11%),
+                linear-gradient(135deg, #eaa8bd, #fff0f4);
+        }
+
+        .big-nail {
+            font-size: 130px;
+        }
+
+        .about-content h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            color: #633344;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: #765c64;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+
+        /* GALLERY */
+
+        .gallery {
+            background: white;
+        }
+
+        .gallery-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .gallery-box {
+            height: 280px;
+
+            border-radius: 18px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #f7c6d6,
+                #fff1f5
+            );
+
+            transition: 0.3s;
+        }
+
+        .gallery-box:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-box span {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-box h3 {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: #633344;
+        }
+
+
+        /* BOOKING */
+
+        .booking {
+            background: #fff7f9;
+        }
+
+        .booking-container {
+            max-width: 700px;
+            margin: auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 40px rgba(120,50,75,0.1);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            color: #633344;
+
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #e4ccd5;
+
+            border-radius: 9px;
+
+            font-family: Arial, sans-serif;
+
+            outline: none;
+
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #c75c7c;
+        }
+
+        textarea {
+            height: 110px;
+            resize: vertical;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .book-btn {
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #b94f70;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .book-btn:hover {
+            background: #873c56;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .contact-card {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #fff7f9;
+
+            border-radius: 18px;
+        }
+
+        .contact-card .icon {
+            font-size: 35px;
+        }
+
+        .contact-card h3 {
+            margin: 15px 0 10px;
+
+            font-family: Georgia, serif;
+
+            color: #633344;
+        }
+
+        .contact-card p {
+            color: #765c64;
+            line-height: 1.6;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #542635;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+        .footer-logo {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: #f0a5bc;
+        }
+
+        footer p {
+            color: #f4dce3;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-container {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Ashu's <span>Nail Bar</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#gallery">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#booking">Book Now</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="welcome">
+                WELCOME TO
+            </div>
+
+            <h1>
+                Ashu's <span>Nail Bar</span>
+            </h1>
+
+            <p class="hero-description">
+                Where beautiful nails meet beautiful moments.
+                Get gorgeous nail extensions, elegant nail art
+                and a look that's uniquely yours.
+            </p>
+
+            <a href="#booking" class="btn">
+                Book Your Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <p>WHAT WE OFFER</p>
+
+            <h2>Our Nail Services</h2>
+
+        </div>
+
+
+        <div class="service-container">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💅
+                </div>
+
+                <h3>
+                    Gel Extensions
+                </h3>
+
+                <p>
+                    Elegant and long-lasting gel
+                    nail extensions customized
+                    specially for you.
+                </p>
+
+                <div class="price">
+                    ₹999
+                </div>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Acrylic Extensions
+                </h3>
+
+                <p>
+                    Strong, stylish and glamorous
+                    acrylic extensions for your
+                    perfect look.
+                </p>
+
+                <div class="price">
+                    ₹1,199
+                </div>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Nail Art
+                </h3>
+
+                <p>
+                    Cute, classy and customized
+                    nail art designed especially
+                    for your style.
+                </p>
+
+                <div class="price">
+                    From ₹299
+                </div>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💎
+                </div>
+
+                <h3>
+                    Premium Nails
+                </h3>
+
+                <p>
+                    Luxury nail extensions with
+                    premium designs, stones and
+                    beautiful decorations.
+                </p>
+
+                <div class="price">
+                    ₹1,499
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <div class="about-image">
+
+                <div class="big-nail">
+                    💅
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="welcome">
+                    ABOUT US
+                </div>
+
+                <h2>
+                    Where Your Nails
+                    Meet Luxury
+                </h2>
+
+                <p>
+                    At Ashu's Nail Bar, we believe that
+                    your nails are more than just an
+                    accessory. They are a way to express
+                    your personality.
+                </p>
+
+                <p>
+                    From simple and classy extensions
+                    to glamorous nail art, we create
+                    beautiful nails specially for you.
+                </p>
+
+                <a href="#booking" class="btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="section-title">
+
+            <p>OUR WORK</p>
+
+            <h2>
+                Nail Inspiration
+            </h2>
+
+        </div>
+
+
+        <div class="gallery-container">
+
+
+            <div class="gallery-box">
+
+                <span>💗</span>
+
+                <h3>
+                    Pink Glam
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-box">
+
+                <span>💎</span>
+
+                <h3>
+                    Luxury Nails
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-box">
+
+                <span>🌸</span>
+
+                <h3>
+                    Floral Art
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-box">
+
+                <span>✨</span>
+
+                <h3>
+                    French Tips
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BOOKING -->
+
+    <section class="booking" id="booking">
+
+        <div class="section-title">
+
+            <p>
+                RESERVE YOUR SLOT
+            </p>
+
+            <h2>
+                Book Your Appointment
+            </h2>
+
+        </div>
+
+
+        <div class="booking-container">
+
+            <form
+                onsubmit="bookAppointment(event)"
+            >
+
+
+                <div class="input-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>
+                        Select Service
+                    </label>
+
+                    <select id="service" required>
+
+                        <option value="">
+                            Choose a service
+                        </option>
+
+                        <option>
+                            Gel Extensions - ₹999
+                        </option>
+
+                        <option>
+                            Acrylic Extensions - ₹1,199
+                        </option>
+
+                        <option>
+                            Nail Art - From ₹299
+                        </option>
+
+                        <option>
+                            Premium Nails - ₹1,499
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="row">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="time"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>
+                        Special Request
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us about your preferred nail design..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="book-btn"
+                >
+                    Confirm Booking
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Visit Ashu's Nail Bar
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Your Shop Address<br>
+                    Your City, India
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    +91 XXXXX XXXXX
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🕐
+                </div>
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+                    Monday - Sunday<br>
+                    10:00 AM - 8:00 PM
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Ashu's <span>Nail Bar</span>
+        </div>
+
+        <p>
+            Beautiful nails. Beautiful you. 💅
+        </p>
+
+        <p class="copyright">
+            © 2026 Ashu's Nail Bar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- BOOKING JAVASCRIPT -->
+
+    <script>
+
+        function bookAppointment(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const phone =
+                document.getElementById("phone").value;
+
+            const service =
+                document.getElementById("service").value;
+
+            const date =
+                document.getElementById("date").value;
+
+            const time =
+                document.getElementById("time").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            alert(
+                "Thank you, " + name +
+                "!\n\n" +
+                "Your appointment request has been received." +
+                "\n\nService: " + service +
+                "\nDate: " + date +
+                "\nTime: " + time +
+                "\n\nWe will contact you at " + phone +
+                " to confirm your booking."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
